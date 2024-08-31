@@ -1,0 +1,47 @@
+1)What is the difference between em and rem units in CSS?
+ans- The em unit is relative to the font size of the nearest parent element. This means that if a parent element's font size changes, all child elements using em will also adjust accordingly.
+The rem unit is always relative to the font size of the root element, typically the <html> element. This means that rem values remain consistent regardless of the parent element's font size.
+
+2)Explain the concept of closures in JavaScript. Provide an example where a closure might be useful.
+ans-  A closure is a fundamental concept of Javascript created when a function is defined inside another function, and the inner function retains access to the variables of the outer function, even after the outer function has finished executing.
+Ex-function createCounter() {
+    let count = 0; 
+    return function() { 
+        count++; 
+        return count; 
+    };
+}
+const counter = createCounter();
+3)What are semantic HTML tags?
+ans- Semantic HTML refers to the use of HTML tags that convey meaning about the content they contain, enhancing the clarity and structure of web pages. It provides context and meaning, making it easier for both humans and machines (like search engines and screen readers) to understand the content.
+
+4)How would you create a responsive design without using a CSS framework like Bootstrap?
+ANS-  We can use media queries to apply different styles at various breakpoints. 
+example:
+body {
+    font-size: 16px;
+   padding: 10px;
+}
+.container {
+    width: 100%;
+}
+@media (min-width: 768px) {
+    body {
+        font-size: 18px;
+        padding: 20px;
+    }
+.container {
+        width: 80%;
+    }}
+@media (min-width: 1024px) {
+    body {
+        font-size: 20px;
+        padding: 30px;
+    }
+  .container {
+        width: 70%;
+    }}
+
+5)What is the purpose of the srcset attribute in the <img> tag?
+ans- The srcset attribute in the <img> tag is designed to provide a list of different image sources for the browser to choose from, based on the device's screen size and resolution. This allows for responsive images that can adapt to various display conditions, improving performance and user experience.
+
