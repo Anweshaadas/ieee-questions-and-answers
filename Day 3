@@ -1,0 +1,55 @@
+1) Write a function that checks if a given number is a perfect number. A perfect number is equal to the sum of its proper divisors (excluding itself).
+Example: Input: 28
+Output: True (28 = 1 + 2 + 4 + 7 + 14)
+python
+def is_perfect_number(n):
+    if n <= 1:
+        return False
+    divisors_sum = sum(i for i in range(1, n) if n % i == 0)
+    return divisors_sum == n
+
+print(is_perfect_number(28))  # Output: True
+2) Palindrome Number
+Question: Write a function that checks if a given integer is a palindrome. A palindrome number remains the same when its digits are reversed.
+Example: Input: 121
+Output: True
+python
+def is_palindrome(n):
+    str_n = str(n)
+    return str_n == str_n[::-1]
+
+print(is_palindrome(121))  # Output: True
+
+3. Count Vowels
+Question: Write a function that counts the number of vowels (a, e, i, o, u) in a given string.
+Example: Input: “Hello, World!”
+Output: 3
+python
+def count_vowels(s):
+    vowels = 'aeiouAEIOU'
+    return sum(1 for char in s if char in vowels)
+
+print(count_vowels("Hello, World!"))  # Output: 3
+
+4) Reverse List
+Question: Write a function that reverses a given list of integers.
+Example: Input: [1, 2, 3, 4, 5]
+Output: [5, 4, 3, 2, 1]
+python
+def reverse_list(lst):
+    return lst[::-1]
+
+print(reverse_list([1, 2, 3, 4, 5]))  # Output: [5, 4, 3, 2, 1]
+
+5. Factorial of a Number
+Question: Write a function that calculates the factorial of a non-negative integer.
+Example: Input: 5
+Output: 120 (5! = 5 × 4 × 3 × 2 × 1)
+python
+def factorial(n):
+    if n < 0:
+        raise ValueError("Factorial is not defined for negative numbers.")
+    result = 1
+    for i in range(2, n + 1):
+        result *= i
+    return result
